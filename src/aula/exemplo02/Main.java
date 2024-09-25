@@ -5,11 +5,11 @@ public class Main {
 
         Product produto = new Product("Computador", 2100.00, 3);
 
-        produto.show();
+        System.out.println(produto);
 
         produto.addProducts(5);
         produto.removeProducts(4);
 
-        produto.show();
+        System.out.println(produto);
     }
 }

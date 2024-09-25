@@ -23,13 +23,6 @@ public class Product {
         this.quantities -= quantities;
     }
 
-    public void show(){
-        System.out.println("Nome: " + this.getName());
-        System.out.println("Preço: " + this.getPrice());
-        System.out.println("Quantidade: " + this.getQuantities());
-        System.out.println("Valor total em produtos: " + this.totalValueInStock());
-    }
-
     public String getName() {
         return name;
     }
@@ -52,5 +45,11 @@ public class Product {
 
     public void setQuantities(int quantities) {
         this.quantities = quantities;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + ", $ " + this.getPrice() + ", " + this.getQuantities() +
+                " units, Total: $ " + this.totalValueInStock();
     }
 }
