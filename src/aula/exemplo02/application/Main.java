@@ -1,4 +1,6 @@
-package aula.exemplo02;
+package aula.exemplo02.application;
+
+import aula.exemplo02.entities.Product;
 
 public class Main {
     public static void main(String[] args) {

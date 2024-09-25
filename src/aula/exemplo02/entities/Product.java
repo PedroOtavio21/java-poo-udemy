@@ -1,4 +1,4 @@
-package aula.exemplo02;
+package aula.exemplo02.entities;
 
 public class Product {
     private String name;
