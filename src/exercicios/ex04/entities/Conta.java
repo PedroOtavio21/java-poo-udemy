@@ -5,16 +5,15 @@ public class Conta{
     private String nomeTitular;
     private double saldo;
 
-    public Conta(int numeroConta, String nomeTitular, double saldo){
+    public Conta(int numeroConta, String nomeTitular, double depositoInicial){
         this.numeroConta = numeroConta;
         this.nomeTitular = nomeTitular;
-        this.saldo = saldo;
+        deposito(depositoInicial);
     }
 
     public Conta(int numeroConta, String nomeTitular) {
         this.numeroConta = numeroConta;
         this.nomeTitular = nomeTitular;
-        saldo = 0.00;
     }
 
     public int getNumeroConta() {
@@ -34,18 +33,13 @@ public class Conta{
     }
 
     public void deposito(double valorDeposito){
-        if(valorDeposito >= 0){
-            saldo += valorDeposito;
-        }
-        else {
-            System.out.println("Valor de depósito indisponível.");
-        }
+        saldo += valorDeposito;
     }
 
     public void saque(double valorSaque){
         if(saldo > 0){
             if(valorSaque > 0){
-                saldo -= valorSaque - 5.00;
+                saldo -= valorSaque + 5.00;
             }
             else {
                 System.out.println("Valor de saque desejado inválido.");
