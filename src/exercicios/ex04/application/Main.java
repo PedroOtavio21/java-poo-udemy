@@ -12,16 +12,17 @@ public class Main{
         Conta conta = null;
         int operacao = 0;
 
-        System.out.println("Insira o seu nome de titular:");
-        String nomeTitular = sc.nextLine();
-        System.out.println("Insira o número de sua conta:");
+        System.out.println("Insira o número de sua conta: ");
         int numeroConta = sc.nextInt();
+        System.out.println("Insira o seu nome de titular: ");
+        sc.nextLine();
+        String nomeTitular = sc.nextLine();
 
         System.out.println("Deseja inserir um depósito inicial? (1 - sim/2 - não)");
         operacao = sc.nextInt();
 
         if(operacao == 1){
-            System.out.printf("Insira o valor inicial do depósito:");
+            System.out.printf("Insira o valor inicial do depósito: ");
             double valorDeposito = sc.nextDouble();
             conta = new Conta(numeroConta, nomeTitular, valorDeposito);
             System.out.println("Conta inicializada com sucesso.");
@@ -31,16 +32,16 @@ public class Main{
             System.out.println("Conta inicializada com sucesso.");
         }
 
-        System.out.println("Insira o valor desejado do depósito:");
+        System.out.println("Insira o valor desejado do depósito: ");
         double deposito = sc.nextDouble();
         conta.deposito(deposito);
         System.out.println("Conta atualizada:");
         System.out.println(conta);
 
-        System.out.println("Insira o valor desejado do saque:");
+        System.out.println("Insira o valor desejado do saque: ");
         double saque = sc.nextDouble();
         conta.saque(saque);
-        System.out.println("Conta atualizada:");
+        System.out.println("Conta atualizada: ");
         System.out.println(conta);
 
         sc.close();
